@@ -1,0 +1,331 @@
+{{!Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+
+<div class="page">
+  <div class="header">
+    {{#with header}}
+    <header class="header_content">
+      <div class="header_block">
+        <img src="/img/svg/apple.svg" alt="Apple" class="header_icon">
+        <nav class="header_block">
+          {{#each links}}
+          <a href="{{url}}" class="header_link">{{text}}</a>
+          {{/each}}
+        </nav>
+      </div>
+      <div class="header_block">
+        <img src="/img/svg/search.svg" alt="Search" class="header_icon">
+        <img src="/img/svg/profile.svg" alt="Profile" class="header_icon">
+      </div>
+    </header>
+    {{/with}}
+  </div>
+
+  <div class="ribbon">
+    <div class="header_content">
+      <div class="ribbon__inner">
+        <p class="ribbon__text">Get $200–$600 in credit toward iPhone 14 or iPhone 14 Pro when you trade in iPhone 11 or
+          higher.</p>
+        <a class="ribbon__link hvr-wobble-skew" href="#ad">Shop iPhone</a>
+      </div>
+    </div>
+  </div>
+
+  {{#with iphone_pro}}
+  <section class="product product_big product_iphone_pro product_dark product_top">
+    <div class="product_content">
+      <h1 class="product_title">{{title}}</h1>
+      <p class="product_description">{{descriptions}}</p>
+      <div class="product_action">
+        {{#with link}}
+        {{#each text}}
+        <a href="{{../link}}" class="product_link">{{this}}</a>
+        {{/each}}
+        {{/with}}
+      </div>
+    </div>
+  </section>
+  {{/with}}
+
+  {{#with iphone}}
+  <section class="product product_big product_iphone product_light product_top">
+    <div class="product_content">
+      <h1 class="product_title">{{title}}</h1>
+      <p class="product_description">{{descriptions}}</p>
+      <div class="product_action">
+        {{#with link}}
+        {{#each text}}
+        <a href="{{../link}}" class="product_link">{{this}}</a>
+        {{/each}}
+        {{/with}}
+      </div>
+    </div>
+  </section>
+  {{/with}}
+
+  {{#with iwatch}}
+  <section class="product product_big product_iwatch product_dark product_top">
+    <div class="product_content">
+      <h1 class="product_title">{{title}}</h1>
+      <p class="product_description">{{descriptions}}</p>
+      <div class="product_action">
+        {{#with link}}
+        {{#each text}}
+        <a href="{{../link}}" class="product_link">{{this}}</a>
+        {{/each}}
+        {{/with}}
+      </div>
+    </div>
+  </section>
+  {{/with}}
+
+  <section class="section_double">
+    <div>
+      {{#with trade_in}}
+      <section class="product product_small product_trade-in product_light product_top">
+        <div class="product_content">
+          <h1 class="product_title">{{title}}</h1>
+          <p class="product_description">{{descriptions}}</p>
+          <div class="product_action">
+            {{#with link}}
+            <a href="{{link}}" class="product_link">{{text}}</a>
+            {{/with}}
+          </div>
+        </div>
+      </section>
+      {{/with}}
+    </div>
+
+    <div>
+      {{#with conference}}
+      <section class="product product_small product_conference product_dark product_bottom">
+        <div class="product_content">
+          <h1 class="product_title">{{title}}</h1>
+          <p class="product_description">{{descriptions}}</p>
+          <div class="product_action">
+            {{#with link}}
+
+            <a href="{{link}}" class="product_link">{{text}}</a>
+
+            {{/with}}
+          </div>
+        </div>
+      </section>
+      {{/with}}
+    </div>
+  </section>
+
+  <section class="section_double">
+    <div>
+      {{#with ipad}}
+      <section class="product product_small product_ipad product_light product_top">
+        <div class="product_content">
+          <h1 class="product_title">{{title}}</h1>
+          <p class="product_description">{{descriptions}}</p>
+          <div class="product_action">
+            {{#with link}}
+            <a href="{{link}}" class="product_link">{{text}}</a>
+            {{/with}}
+          </div>
+        </div>
+      </section>
+      {{/with}}
+    </div>
+
+    <div>
+      {{#with small_business}}
+      <section class="product product_small product_small_business product_dark product_top">
+        <div class="product_content">
+          <h1 class="product_title">{{title}}</h1>
+          <p class="product_description">{{descriptions}}</p>
+          <div class="product_action">
+            {{#with link}}
+            <a href="{{link}}" class="product_link">{{text}}</a>
+            {{/with}}
+          </div>
+        </div>
+      </section>
+      {{/with}}
+    </div>
+  </section>
+
+  <section class="section_double">
+    <div>
+      {{#with gift}}
+      <section class="product product_small product_gift product_light product_top">
+        <div class="product_content">
+          <h1 class="product_title">{{title}}</h1>
+          <p class="product_description">{{descriptions}}</p>
+          <div class="product_action">
+            {{#with link}}
+            <a href="{{link}}" class="product_link">{{text}}</a>
+            {{/with}}
+          </div>
+        </div>
+      </section>
+      {{/with}}
+    </div>
+
+    <div>
+      {{#with card}}
+      <section class="product product_small product_card product_light product_top">
+        <div class="product_content">
+          <h1 class="product_title">{{title}}</h1>
+          <p class="product_description">{{descriptions}}</p>
+          <div class="product_action">
+            {{#with link}}
+            <a href="{{link}}" class="product_link">{{text}}</a>
+            {{/with}}
+          </div>
+        </div>
+      </section>
+      {{/with}}
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer_content">
+      <div class="footer_block">
+        <div class="footer__block expanded">
+          <strong class="footer__title">Store</strong>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#Mac">Mac</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#iPad">iPad</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#iPhone">iPhone</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#Watch">Watch</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AirPods">AirPods</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#TV&amp;Home">TV &amp; Home</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block expanded">
+          <strong class="footer__title">Entertainment</strong>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleOne">Apple One</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleTV+">Apple TV+</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleMusic">Apple Music</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleArcade">Apple Arcade</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleFitness+">Apple Fitness+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block expanded">
+          <strong class="footer__title">Apple Store</strong>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#FindaStore">Find a Store</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#GeniusBar">Genius Bar</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#TodayatApple">Today at Apple</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleCamp">Apple Camp</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleStoreApp">Apple Store App</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#CertifiedRefurbished">Certified Refurbished</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleTradeIn">Apple Trade In</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block expanded">
+          <strong class="footer__title">Apple Values</strong>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#Accessibility">Accessibility</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#Education">Education</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#Environment">Environment</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#InclusionandDiversity">Inclusion and Diversity</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#Privacy">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block expanded">
+          <strong class="footer__title">About Apple</strong>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#Newsroom">Newsroom</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleLeadership">Apple Leadership</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#CareerOpportunities">Career Opportunities</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#Investors">Investors</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#Ethics&amp;Compliance">Ethics &amp; Compliance</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#Events">Events</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#ContactApple">Contact Apple</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block expanded">
+          <strong class="footer__title">For Business</strong>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleandBusiness">Apple and Business</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#ShopforBusiness">Shop for Business</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#AppleandEducation">Apple and Education</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#ShopforK-12">Shop for K-12</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#ShopforCollege">Shop for College</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
